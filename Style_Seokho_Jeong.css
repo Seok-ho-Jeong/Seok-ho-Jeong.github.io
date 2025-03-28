@@ -102,18 +102,6 @@ a{
    
 }
 
-/* 반응형 스타일 */
-@media (max-width: 768px) {
-    header {
-        padding: 15px 50px;
-    }
-    .big_wrapper {
-        padding-top: 100px;
-    }
-    .wrapper_1, .wrapper_2 {
-        width: 90%; /* 모바일에서는 가로 폭을 줄임 */
-    }
-}
 
 .wrapper_1,
 .wrapper_2{
