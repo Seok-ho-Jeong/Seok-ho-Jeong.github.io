@@ -324,7 +324,7 @@ a{
 
 .icon{
     margin-right: 5px;
-    color : #fff;
+    filter: brightness(0) invert(1);
 }
 .icon_1{
     margin-left: 20px;
