@@ -1,0 +1,444 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+
+/* 브라우저 별로 통일성을 부과하기 위함*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body {
+    display : flex;
+    
+    justify-content: center ;
+    align-items: center;
+    min-height:100vh;
+    background: url('/imgs_Seokho_Jeong/wallpaper.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    
+    /*자동으로 가로 스크롤바를 생성하여 사용자가 넘치는 콘텐츠를 스크롤 해서 볼 수 있게 함*/
+    /*홈페이지 창이 줄어들었을 때, 오버플로우 방지*/
+    
+    overflow: auto;
+
+    
+}
+
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    
+    display: flex;
+    justify-content : space-between;
+    align-items: center;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+/* 로고 스타일 설정 */
+a{
+    text-decoration: none;
+}
+
+.logo{
+ 
+
+    font-size:50px;
+    color: #fff;
+}
+
+/* 네비게이션 메뉴 스타일 
+네비게이션 메뉴가 흰색 글자로 일정 간격을 유지하며 정렬됨 */
+/* margin-left: 40px => 각 메뉴 항목 사이에 40px 간격을 추가 */
+
+.navigation .popup {
+
+     
+    width: 130px;
+    height : 50px;
+    background: transparent;
+    border : 2px solid #fff;
+    outline : none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left:40px;
+    transition: .5s;
+}
+
+.navigation .popup:hover{
+    background: #fff;
+    color : #162938;
+}
+
+.big_wrapper {
+
+    display: flex; /* Flexbox 사용 */
+    justify-content: center; /* 가로 중앙 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+    height: 100vh; /* 화면 높이의 100% */
+    
+    padding-top : 5px;
+    gap : 100px;
+    /* 홈페이지 폭이 줄었을때, 하단에 스크롤 바 추가 */
+    min-width: 1100px; /* 기존 홈페이지의 레이아웃 너비 */
+    margin: 0 auto;
+    overflow-y: auto;
+   
+}
+
+/* 반응형 스타일 */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 50px;
+    }
+    .big_wrapper {
+        padding-top: 100px;
+    }
+    .wrapper_1, .wrapper_2 {
+        width: 90%; /* 모바일에서는 가로 폭을 줄임 */
+    }
+}
+
+.wrapper_1,
+.wrapper_2{
+    display: flex;
+    justify-content: center;
+    align-items : center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out; /* 0.5초 동안 부드럽게 나타남 */
+    overflow: hidden; 
+
+    border-radius : 20px;
+    background : rgba(255,255,255,0.1);
+    box-shadow: 0 0 30px rgba(0,0,0,.5);
+
+    position : relative;
+
+}
+
+
+.wrapper_2{
+  
+    position : relative;
+}
+
+
+/* 이미지 조절 */
+.ID_photo {
+    display : flex;
+    justify-content: center; /* 수평 중앙 정렬 */
+    width : 80%;
+    margin: 0 auto;
+    margin-top : 15px;
+    border: 1px solid #ccc;
+}
+
+
+
+
+.form-box.intro_1 {
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: flex-start;     /* 수직 중앙 정렬 */
+    width : 400px;
+    height : 500px;
+    padding : 40px;
+    padding-top: 5px;
+    border-radius : 20px;
+
+    text-align: center;
+}
+
+
+.form-box.intro_2-1 {
+    text-align: left;
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: flex-start;     /* 수직 중앙 정렬 */
+    width : 400px;
+    height : 500px;
+    padding : 40px;
+    padding-top: 5px;
+    border-radius : 20px;
+}
+
+
+
+.form-box.intro_2-2 {
+
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+
+    
+    text-align: left;
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: flex-start;     /* 수직 중앙 정렬 */
+    width : 400px;
+    height : 500px;
+    padding : 40px;
+    padding-top: 5px;
+    border-radius : 20px;
+}
+
+
+
+/*홈페이지 로딩 전 초기 상태*/
+.form-box.intro_1,
+.form-box.intro_2-1,
+.form-box.intro_2-2 {
+    opacity: 0;
+    
+    transition: opacity 1.0s ease-out, transform 0.5s ease-out, height 0.2s ease, backdrop-filter 1.0s ease-out;
+}
+
+
+
+/*홈페이지 로딩 후 추가될 클래스*/
+.wrapper_1.active-popup,
+.wrapper_2.active-popup {
+    opacity: 1;
+    backdrop-filter: blur(10px);
+  }
+
+/*홈페이지 로딩 후 추가될 클래스*/
+.wrapper_1.active-popup .form-box.intro_1,
+.wrapper_2.active-popup .form-box.intro_2-1,
+.wrapper_2.active-popup .form-box.intro_2-2{
+    opacity: 1;
+}
+
+
+
+
+.wrapper_2.active .form-box.intro_2-1{
+    transition: none;
+    transform : translateX(-400px);
+}
+
+.wrapper_2.active .form-box.intro_2-2{
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+
+.wrapper_2.deactive .form-box.intro_2-1{
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.wrapper_2.deactive .form-box.intro_2-2{
+    transition: none;
+    transform : translateX(400px);
+    
+}
+
+
+
+
+.form-box.intro_1 h2{
+    color : #fff;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-family: "Encode Sans", sans-serif;
+    font-weight : 700;
+    font-size: 35px;
+}
+
+
+.form-box.intro_2-1 h2{
+    text-align: center;
+    color : #fff;
+    margin-top: 15px;
+    margin-bottom: 0;
+    font-family: "Encode Sans", sans-serif;
+    font-weight : 700;
+    font-size: 35px;
+}
+
+.form-box.intro_2-2 h2{
+    text-align: center;
+    color : #fff;
+    margin-top: 18px;
+    margin-bottom: 0px;
+    font-family: "Encode Sans", sans-serif;
+    font-weight : 700;
+    font-size: 32px;
+}
+
+
+.next-slide-link a,
+.back-slide-link a {
+    position: fixed; /*밑줄 기능 구현*/
+    text-decoration: none;
+    font-size : 1.3em;
+    color: #fff;
+    text-align: center;
+    font-weight: 500;
+    /* margin: 15px 0px 10px;
+
+    margin-left : 280px; */
+    bottom : 30px;
+    right : 45px;
+
+}
+
+.next-slide-link a::after,
+.back-slide-link a::after {
+    content: '';
+    position: absolute;
+    left : 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.next-slide-link a:hover::after,
+.back-slide-link a:hover::after {
+ 
+    transform-origin: left;
+    transform : scaleX(1);
+   
+}
+
+
+
+.icon{
+    margin-right: 5px;
+}
+.icon_1{
+    margin-left: 20px;
+    margin-right: 5px;
+}
+
+.icon_2{
+    margin-left: 40px;
+    margin-right: 5px;
+    font-size: 15px;
+}
+
+.icon_3{
+    margin-left: 40px;
+    margin-right: 5px;
+    font-size: 10px;
+}
+
+.icon_pc{
+    margin-right: 8px;
+    font-size: 24px;
+}
+
+.icon_data{
+ 
+    margin-right: 8px;
+    font-size: 24px;
+}
+
+
+/* 일반적인 줄 띄어쓰기 설정 */
+.line_label {
+    /* display: block; */
+    margin-bottom: 8px; /* 필요에 따라 아래 여백을 추가 */
+    color : #fff;
+}
+
+/* 줄 띄어쓰기 설정 */
+.line_label_1 {
+    /* display: block; */
+    margin-bottom: 8px; /* 필요에 따라 아래 여백을 추가 */
+    color : #fff;
+}
+  
+  /* 줄 띄어쓰기 설정 */
+.line_label_3 {
+    /* display: block; */
+    margin-left: 60px;
+    margin-bottom: 8px; /* 필요에 따라 아래 여백을 추가 */
+    color : #fff;
+}
+
+  /* 줄 띄어쓰기 설정 */
+.line_label_4 {
+    /* display: block; */
+    margin-bottom: 8px; /* 필요에 따라 아래 여백을 추가 */
+    color : #fff;
+}
+
+
+.input-box{
+    margin-top: 2px;
+    color : #fff;
+    
+}
+
+.input-box_1{
+    margin-top: 10px;
+    margin-bottom: 7px;
+    color : #fff;
+}
+
+
+.input-box_2{
+    margin-top: 90px;
+    margin-bottom: 50px;
+    color : #fff;
+}
+
+.input-box_sub{
+    margin-top: 2px;
+    margin-bottom : 10px;
+    color : #fff;
+    
+}
+
+
+.input-box_margin{
+    margin-top: 5px;
+    color : #fff;
+}
+
+.title {
+    font-size : 18px;
+    font-weight: 500;
+    color : #fff;
+}
+
+.title_2 {
+    padding-left: 25px;
+    font-size : 24px;
+    font-weight: 500;
+    color : #fff;
+}
+
+.title_name {
+    font-size : 18px;
+    font-weight: 500;
+    color : #fff;
+}
+
+
+.icon_4{
+    justify-content: right;
+    margin-left: 40px;
+    margin-right: 5px;
+    font-size: 30px;
+}

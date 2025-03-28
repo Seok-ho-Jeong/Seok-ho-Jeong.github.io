@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,
+    initial-scale= 1.0">
+    <title>Seokho Jeong in CTRL Lab</title>
+    <link rel="stylesheet" href="Style_Seokho_Jeong.css">
+</head>
+
+
+
+<!-- class : 사용자 정의 -->
+<!-- <a> : 하이퍼 링크를 생성하는 HTML 요소 -->
+<!-- href : 이동할 링크 (웹 주소, 파일 경로) -->
+
+
+
+<body>
+    <!-- header -->
+    <!-- 웹사이트의 상단(header) 영역을 정의하는 태그  -->
+    <!-- 보통 로고, 네비게이션 메뉴, 로그인 버튼 등을 포함  -->
+
+    <!-- <h2> : 제목 태그, 로고 의미 => <h1>보다 작고 <h3>보다 크다 -->
+    <!-- <nav> : 네비게이션(메뉴)를 담는 태그 -->
+    <!-- <button> : 특정 요소를 묶어주는 블록 레벨 컨테이너 -->
+    <!--          : 보통 레이아웃을 만들거나 스타일을 적용할 때 사용 -->
+    <header>
+        <a href="https://control.kaist.ac.kr/home" target="_blank">
+            <h2 class="logo">Ctrl Lab</h2>
+          </a>
+        <nav class = "navigation">
+            <button class="popup">Hello</button>
+        </nav>
+    </header>
+    <!-- <div> : 로그인 창을 감싸는 컨테이너 역할을 함 -->
+    <!-- <form> : 사용자로부터 입력을 받아 서버로 전송하는 HTML 요소 -->
+    <div class="big_wrapper">
+        <div class="wrapper_1">
+            
+
+            <!-- 로그인 항목 -->
+            <div class="form-box intro_1">
+                <h2>ID Photo</h2>
+                <form action="#">
+                    <div class="input-box">
+                        <img src="imgs_Seokho_Jeong/ID_photo.jpg" alt="ID_photo" class="ID_photo">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="wrapper_2">
+            <div class="form-box intro_2-1">
+                <h2>Profile</h2>
+                <form action="#">
+                    <!-- 이름 -->
+                    <div class="input-box_1">
+                        <span class="icon">
+                            <ion-icon name="person"></ion-icon>
+                        </span>
+                        <label class ="title">Name</label><label> : </label><label class = "title_name">SeokHo Jeong</label>
+                    </div>
+                    <div class="input-box_1">
+                        <span class="icon">
+                            <ion-icon name="school"></ion-icon>
+                        </span>
+                        <label class ="title">Education</label>
+                    </div>
+                    <!-- 학력 -->
+                    <div class="input-box">
+                        <span class="icon_1">
+                            <ion-icon name="checkmark"></ion-icon>
+                        </span>
+                        <label class = "line_label">Bachelor's degree</label> 
+                    </div>
+                    <div class="input-box_margin">
+                        <span class="icon_2">
+                            <ion-icon name="attach"></ion-icon>
+                            <label class = "line_label_1">School of Electronic Engineering</label>
+                        </span>
+                    </div>
+                    <div class="input-box_sub">
+                        <span class="icon_2">
+                            <ion-icon name="attach"></ion-icon>
+                            <label class = "line_label_1">Kyungpook National University</label>
+                            <label class = "line_label_3">(Mar. 2018 ~ Feb. 2025)</label>
+                        </span>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="icon_1">
+                            <ion-icon name="checkmark"></ion-icon>
+                        </span>
+                        <label class = "line_label">Master's degree</label> 
+                    </div>
+                    <div class="input-box_margin">
+                        <span class="icon_2">
+                            <ion-icon name="attach"></ion-icon>
+                            <label class = "line_label_1">School of E.E Engineering</label>
+                        </span>
+                    </div>
+                    
+                    <div class="input-box">
+                        <span class="icon_2">
+                            <ion-icon name="attach"></ion-icon>
+                            <label class = "line_label_1">KAIST</label>
+                            <label class = "line_label_4">(Feb. 2025 ~ Present)</label>
+                        </span>
+                    </div>
+                    <!-- 이메일 주소소 -->
+                    <div class="input-box_1">
+                        <span class="icon">
+                            <ion-icon name="mail"></ion-icon>
+                        </span>
+                        <label class ="title">Email</label> 
+                    </div>
+                    <div class="input-box">
+                        <span class="icon_3">
+                            <ion-icon name="send"></ion-icon>
+                        </span>
+                        <label class = "line_label">jungsh1121@kaist.ac.kr</label> 
+                    </div>
+                    <div class="next-slide-link">
+                        <a href = "#" class = 'next_link' >Next</a>
+                    </div>
+                </form>
+            </div>
+
+            <div class ="form-box intro_2-2">
+                <h2>Fields of Interest</h2>
+                <form action="#">
+                     <!-- 이름 -->
+                     <div class="input-box_2">
+                        <span class="icon_pc">
+                            <ion-icon name="desktop-outline"></ion-icon>
+                        </span>
+                        <label class ="title_2">Machine Learning</label>
+                       
+                    </div>
+                    <div class="input-box_2">
+                        <span class="icon_data">
+                            <ion-icon name="analytics-outline"></ion-icon>
+                        </span>
+                        <label class ="title_2">Data Association</label> 
+                    </div>
+                    <div class="back-slide-link">
+                        <a href = "#" class = 'back_link' >Back</a>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    
+    <script src="Script_Seokho_Jeong.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+
+</html>
