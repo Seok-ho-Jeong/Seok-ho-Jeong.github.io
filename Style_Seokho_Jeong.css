@@ -14,12 +14,15 @@
 
 
 body {
+    margin : 0;
+    padding : 0;
     display : flex;
+    box-sizing: border-box;
     
     justify-content: center ;
     align-items: center;
 /*     min-height:100vh; */
-    box-sizing: border-box;
+    
     overflow-x: hidden;
     background: url('/imgs_Seokho_Jeong/wallpaper.jpg') no-repeat;
     background-size: cover;
