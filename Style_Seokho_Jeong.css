@@ -327,7 +327,7 @@ a{
 }
 
 .ionicons{
-    filter: brightness(0) invert(1);
+    filter: invert(1);
 }
 .icon_1{
     margin-left: 20px;
