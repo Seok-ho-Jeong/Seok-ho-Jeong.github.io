@@ -324,6 +324,9 @@ a{
 
 .icon{
     margin-right: 5px;
+}
+
+.ionicons{
     filter: brightness(0) invert(1);
 }
 .icon_1{
