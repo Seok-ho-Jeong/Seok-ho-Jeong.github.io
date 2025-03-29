@@ -429,6 +429,8 @@ a{
 }
 
 .title {
+    white-space: pre-line;  /* 줄바꿈과 공백을 유지합니다. */
+
     font-size : 18px;
     font-weight: 500;
     color : #fff;
