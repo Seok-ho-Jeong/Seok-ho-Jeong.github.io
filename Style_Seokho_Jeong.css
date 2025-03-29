@@ -391,7 +391,7 @@ a{
   /* 줄 띄어쓰기 설정 */
 .line_label_4 {
     /* display: block; */
-    margin-bottom: 8px; /* 필요에 따라 아래 여백을 추가 */
+/*     margin-bottom: 8px; */
     color : #fff;
 }
 
