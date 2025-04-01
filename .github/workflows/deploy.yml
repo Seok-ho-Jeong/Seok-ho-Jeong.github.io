@@ -1,0 +1,20 @@
+name: Introduction Website
+
+on:
+  push:
+    branches:
+      - main  # main 브랜치에 push될 때 실행
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v3
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          external_repository: Seok-ho-Jeong/Seok-ho-Jeong.github.io
+          publish_dir: ./  # index.html이 있는 루트 디렉토리
