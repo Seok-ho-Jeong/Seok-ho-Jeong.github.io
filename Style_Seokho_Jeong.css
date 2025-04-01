@@ -407,7 +407,7 @@ a{
 
 .input-box_1{
 /*     margin-top : 10px; */
-    margin-bottom: 10px;
+    margin-bottom: 10px !important;
     color : #fff;
 }
 
