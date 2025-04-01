@@ -370,6 +370,7 @@ a{
 /* 일반적인 줄 띄어쓰기 설정 */
 .line_label {
     /* display: block; */
+    margin-bottom:6px;
     color : #fff;
 }
 
