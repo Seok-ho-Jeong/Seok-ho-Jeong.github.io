@@ -15,7 +15,7 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.PERSONAL_TOKEN }}
           external_repository: Seok-ho-Jeong/Seok-ho-Jeong.github.io
           publish_branch: main
           publish_dir: ./  # index.html이 있는 루트 디렉토리
