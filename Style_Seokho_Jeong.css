@@ -400,6 +400,10 @@ a{
 .input-box{
     margin-top: 2px;
     color : #fff;
+    border: 2px solid rgba(255, 255, 255, 0.3); /* 연한 흰색 */
+    border-radius: 5px; /* (선택) 모서리 둥글게 */
+}
+
     
 }
 
