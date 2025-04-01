@@ -17,4 +17,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           external_repository: Seok-ho-Jeong/Seok-ho-Jeong.github.io
+          publish_branch: main
           publish_dir: ./  # index.html이 있는 루트 디렉토리
